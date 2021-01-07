@@ -70,3 +70,17 @@ class Citizen:
         else:
             self.__age = value
 
+    @property
+    def age(self):
+        print("나이를 리턴합니다.")
+        return self._age
+
+    @age.setter
+    def age(self, value):
+        print("나이를 설정합니다.")
+        if value < 0:
+            print("나이는 0보다 작을 수 없습니다. 기본 값 0으로 나이를 설정하겠습니다.")
+            self._age = 0
+        else:
+            self._age = value
+
